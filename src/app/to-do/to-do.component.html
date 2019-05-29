@@ -1,0 +1,35 @@
+<div class="container  mainBody " style="background-color: aliceblue">
+    <div class="col-md-7 mainBodySec " style="">
+    <br>
+    <br>
+        <div class="card">
+            <div class="card-body ">
+                 <div class="text-center font-weight-bold font">TODOLIST</div>
+                        <br>
+                        <br>
+                        <input  [(ngModel)]="saveTask" type="text" placeholder="Type Your Task" class="form-control font" aria-label="Sizing example input" >
+                        <br>
+                        <input [(ngModel)]="saveDate"  type="date" class="form-control font" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        <br>
+                        <button  (click)="OnSaveTask()" class="btn btn-primary font">Save</button>
+                        <br>
+                        <br>
+                        <input  [(ngModel)] = "firstdate" (change)="showTodo()" type="date"  class="form-control font" aria-label="Sizing example input"  >
+                        <br>
+                        <br>
+                        <br>
+                <div *ngFor="let a of selectDate">
+                    <div *ngIf="a.date == firstdate">
+                        <p class="font"> {{'Date :   '+ a.date }}</p>
+                        <p  class="font"> {{'Task :   '+ a.task }}</p>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+
+
